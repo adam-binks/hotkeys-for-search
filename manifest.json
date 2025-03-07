@@ -1,48 +1,35 @@
 {
-   "name": "__MSG_name__",
-   "version": "1.3.1",
-   "manifest_version": 2,
-   "description": "__MSG_description__",
-   "default_locale": "en",
-   "background": {
-    "scripts": ["background.js"]
-   },
-   "icons": {
-	   "16": "icon.png",
-	   "128": "icon2.png"
-	},
-   "permissions": ["commands", "activeTab", "storage"],
-   "commands": {
-	"search1": {
-	"suggested_key": {
-	  "default": "Alt+Q"
-	},
-	"description": "Website 1"
-	},
-	"search2": {
-	"suggested_key": {
-	  "default": "Alt+W"
-	},
-	"description": "Website 2"
-	},
-	"search3": {
-	"suggested_key": {
-	  "default": "Alt+A"
-	},
-	"description": "Website 3"
-	},
-	"search4": {
-	"suggested_key": {
-	  "default": "Alt+S"
-	},
-	"description": "Website 4"
-	}
-   },
-  "browser_action": {
-  	"default_popup": "options.html" 
+  "manifest_version": 3,
+  "name": "Search Shortcuts",
+  "version": "1.0",
+  "description": "Quickly search using hotkeys",
+  "permissions": [
+    "activeTab",
+    "commands",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
   },
-    "options_ui": {
-    "page": "options.html",
-    "chrome_style": true
-  }
+  "commands": {
+    "search1": {
+      "suggested_key": {
+        "default": "Alt+Q"
+      },
+      "description": "Google Search"
+    },
+    "search2": {
+      "suggested_key": {
+        "default": "Alt+W"
+      },
+      "description": "Wikipedia Search"
+    },
+    "search3": {
+      "suggested_key": {
+        "default": "Alt+A"
+      },
+      "description": "YouTube Search"
+    }
+  },
+  "default_locale": "en"
 }
