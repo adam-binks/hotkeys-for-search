@@ -3,11 +3,7 @@
   "name": "Search Shortcuts",
   "version": "1.0",
   "description": "Quickly search using hotkeys",
-  "permissions": [
-    "activeTab",
-    "commands",
-    "scripting"
-  ],
+  "permissions": ["activeTab", "commands", "scripting"],
   "background": {
     "service_worker": "background.js"
   },
@@ -26,9 +22,9 @@
     },
     "search3": {
       "suggested_key": {
-        "default": "Alt+A"
+        "default": "Alt+S"
       },
-      "description": "YouTube Search"
+      "description": "Google Scholar Search"
     }
   },
   "default_locale": "en"
